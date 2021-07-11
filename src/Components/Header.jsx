@@ -9,7 +9,7 @@ export const Header = () => {
                 <span>Test for job</span>
             </div>
             <div>
-                <a href="/" ><img src={restart}></img></a>
+                <a href="/" ><img src={restart} alt="Restart"></img></a>
             </div>
         </header>
     )

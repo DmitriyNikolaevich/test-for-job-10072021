@@ -2,10 +2,10 @@
     height: 100px;
     width: 100%;
     background-color: #F0F4FB;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 

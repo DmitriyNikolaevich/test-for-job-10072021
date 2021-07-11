@@ -2,14 +2,16 @@ import { Formik } from 'formik'
 import React from 'react'
 import s from './Tasks.module.css'
 import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
 import { setHitAC, setMissesAC } from '../store/mainReducer'
 import { Task } from './Task'
+import { Result } from './Result'
+import { useState } from 'react'
 
 export const Tasks = () => {
 
     const dispatch = useDispatch()
-    const history = useHistory()
+
+    const [showResult, setShowResult] = useState(false)
 
     const arrMod = () => {
 
@@ -69,27 +71,28 @@ export const Tasks = () => {
                     for (const key in values) {
                         if (Object.hasOwnProperty.call(values, key)) {
                             if (!values[key]) {
-                                errors[key] = true
+                                errors[key] = 'Введите значение'
                             } else if (
                                 !/^(0$|-?[1-9]\d*(\.\d*[1-9]$)?|-?0\.\d*[1-9])$/i.test(values[key])
                             ) {
-                                errors[key] = true
+                                errors[key] = 'Значение должно быть числом'
                             }
                         }
                     }
                     return errors
                 }}
-                onSubmit={(values, { setSubmitting }) => {
-                        let hits = 0, misses = 0
+                onSubmit={(values) => {
+                        let hits = [], misses = []
                         for (const key in values) {
                             if (Object.hasOwnProperty.call(values, key)) {
-                                Number(values[key]) === arr.filter(item => item.id === key)[0].answer ? hits++ : misses++
+                                Number(values[key]) === arr.filter(item => item.id === key)[0].answer 
+                                                                    ? hits.push(key) 
+                                                                    : misses.push(key)
                             }
                         }
-                        setSubmitting(false)
                         dispatch(setHitAC(hits))
                         dispatch(setMissesAC(misses))
-                        history.push('/result')
+                        setShowResult(true)
                 }}
             >
                 {({
@@ -110,17 +113,20 @@ export const Tasks = () => {
                                                      touched={touched[task.id]}
                                                      taskText={`${task.arg1} ${task.operation} ${task.arg2}`}
                                                      taskName={task.id}
+                                                     showResult={showResult}
+                                                     taskID={task.id}
                                                      key={task.id}
                                                     />)}
                             </table>
-                            <button type="submit">
+                            <button type="submit" hidden={showResult}>
                                 Далее
                             </button>
                         </div>
                     </form>
                 )}
             </Formik>
-}
+            }
+        {showResult && <Result />}
         </section>
     )
 }

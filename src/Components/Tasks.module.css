@@ -1,3 +1,8 @@
+.wrapper {
+    height: 80%;
+    padding-bottom: 100px;
+}
+
 .wrapper table {
     margin: auto;
 }

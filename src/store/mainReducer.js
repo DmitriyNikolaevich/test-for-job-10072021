@@ -4,8 +4,8 @@ const SET_MISSES = 'test_for_job/SET_MISSES'
 
 const initialState = {
     name: '',
-    hits: 0,
-    misses: 0
+    hits: [],
+    misses: []
 }
 
 const mainReducer = (state = initialState, action) => {

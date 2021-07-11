@@ -11,9 +11,6 @@ export const Result = () => {
 
     return (
         <section className={s.wrapper}>
-            <div className={s.text}>
-                <span>{`${name} - молодец!`}</span>
-            </div>
             <div className={s.tableWrapper}>
                 <table>
                     <tbody>
@@ -25,7 +22,7 @@ export const Result = () => {
                                 Выполненно верно
                             </td>
                             <td>
-                                {hits}
+                                {hits.length}
                             </td>
                         </tr>
                         <tr>
@@ -33,11 +30,14 @@ export const Result = () => {
                                 Выполненно не верно
                             </td>
                             <td>
-                                {misses}
+                                {misses.length}
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className={s.text}>
+                <span>{`${name} - молодец!`}</span>
             </div>
         </section>
     )

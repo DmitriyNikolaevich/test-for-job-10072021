@@ -8,5 +8,3 @@ const commonReducer = combineReducers({
 export const store = createStore(commonReducer)
 
 export default store
-
-window.__store__ = store
