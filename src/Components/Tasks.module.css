@@ -1,0 +1,14 @@
+.wrapper table {
+    margin: auto;
+}
+
+.wrapper button {
+    height: 44px;
+    width: 130px;
+    border: none;
+    background: #F0F4FB;
+    border-radius: 5px;
+    color: #727280;
+    margin-top: 50px;
+    font-size: 20px;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    height: 100px;
+    width: 100%;
+    background-color: #F0F4FB;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.wrapper span {
+    margin-left: 50px;
+    font-size: 20px;
+}

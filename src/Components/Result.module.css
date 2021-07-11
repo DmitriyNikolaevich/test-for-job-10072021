@@ -1,0 +1,18 @@
+.wrapper {
+    margin-top: 100px;
+}
+
+.text {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.tableWrapper table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tableWrapper td, th {
+    padding: 10px;
+    border: 1px solid gray;
+}

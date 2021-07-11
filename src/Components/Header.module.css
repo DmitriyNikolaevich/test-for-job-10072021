@@ -1,0 +1,18 @@
+.wrapper {
+    height: 100px;
+    width: 100%;
+    background-color: #F0F4FB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper span {
+    margin-left: 50px;
+    font-size: 40px;
+}
+
+.wrapper img {
+    margin-right: 50px;
+    height: 30px;
+}
