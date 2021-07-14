@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { getHitsSelector } from '../store/selectors'
-import s from './Task.module.css'
+import s from './Task.module.scss'
 
 export const Task = ({ handleChange, handleBlur, values, errors, touched, taskText, taskName, showResult, taskID }) => {
 

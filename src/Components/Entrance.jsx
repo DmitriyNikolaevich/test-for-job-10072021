@@ -2,7 +2,7 @@ import React from 'react'
 import { Formik } from 'formik'
 import { useDispatch } from 'react-redux'
 import { setNameAC } from '../store/mainReducer'
-import s from './Entrance.module.css'
+import s from './Entrance.module.scss'
 import { useHistory } from 'react-router'
 
 export const Entrance = () => {

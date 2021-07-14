@@ -4,7 +4,7 @@ import { Entrance } from './Components/Entrance'
 import { Footer } from './Components/Footer'
 import { Header } from './Components/Header'
 import { Tasks } from './Components/Tasks'
-import s from './App.module.css'
+import s from './App.module.scss'
 const App = () => {
 
   return (

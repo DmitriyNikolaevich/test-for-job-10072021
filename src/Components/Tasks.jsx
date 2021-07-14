@@ -1,6 +1,6 @@
 import { Formik } from 'formik'
 import React from 'react'
-import s from './Tasks.module.css'
+import s from './Tasks.module.scss'
 import { useDispatch } from 'react-redux'
 import { setHitAC, setMissesAC } from '../store/mainReducer'
 import { Task } from './Task'

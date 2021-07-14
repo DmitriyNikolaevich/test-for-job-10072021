@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Result.module.css'
+import s from './Result.module.scss'
 import { useSelector } from 'react-redux'
 import { getHitsSelector, getMissesSelector, getNameSelector } from '../store/selectors'
 
