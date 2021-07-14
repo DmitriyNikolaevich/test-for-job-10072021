@@ -1,0 +1,16 @@
+@import "../scss/colors.scss";
+
+.wrapper {
+    height: 100px;
+    width: 100%;
+    background-color: $lightGray;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+        margin-left: 50px;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,20 @@
+@import "../scss/colors.scss";
+
+.wrapper {
+    margin-top: 30px;
+    .tableWrapper {
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        };
+        td, th {
+            padding: 10px;
+            border: 1px solid $darkGray;
+        };
+    };
+    .text {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 25px;
+    };
+}
